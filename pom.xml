@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<mybatis-plus-boot-starter.version>2.1.9</mybatis-plus-boot-starter.version>
+		<mybatisplus.version>2.1.8</mybatisplus.version>
+		<HikariCP.version>2.4.13</HikariCP.version>
+		<fastjson.version>1.2.39</fastjson.version>
+		<mysql-conn-version>5.1.8</mysql-conn-version>
+	</properties>
+
+	<groupId>com.dawa</groupId>
+	<artifactId>dawa-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<description>基础模块</description>
+	<name>dawa-parent</name>
+	<modelVersion>4.0.0</modelVersion>
+
+	<!--子模块-->
+	<modules>
+		<module>dawa-common</module>
+		<module>dawa-dao</module>
+		<module>dawa-service</module>
+		<module>dawa-web</module>
+		<module>dawa-oauth</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.dawa</groupId>
+				<artifactId>dawa-common</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.dawa</groupId>
+				<artifactId>dawa-dao</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.dawa</groupId>
+				<artifactId>dawa-service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.dawa</groupId>
+				<artifactId>dawa-web</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.dawa</groupId>
+				<artifactId>dawa-oauth</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
